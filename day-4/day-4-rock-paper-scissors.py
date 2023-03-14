@@ -25,8 +25,6 @@ scissors = '''
 ---.__(___)
 '''
 
-#Write your code below this line 👇
-
 import random
 print("Welcome to Rock, Paper, Scissors!")
 print("ASCII art by unknown artist")
