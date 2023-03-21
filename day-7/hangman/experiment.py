@@ -6,7 +6,7 @@ import hangman_words
 
 # TO DO List
 # Clear screen after every guess
-# If the user has already guessed a letter that is already guessed and has been determined to not be in the word, don't penalize the user
+# If the user has already guessed a letter that is already guessed and has been determined to not be in the word, don't penalize the user again.
 # Give user opportunity to start the game again
 # Give user opportunity to append the list of words. (User input list?)
 # SFX?
@@ -19,6 +19,7 @@ word_list = hangman_words.word_list
 chosen_word = random.choice(word_list)
 logging.info(f'Chosen word is: {chosen_word}')
 display = []
+guessed_letters = []
 word_length = len(chosen_word)
 end_of_game = False
 
@@ -39,10 +40,18 @@ print(f"The chosen word is {chosen_word}")
 while not end_of_game:
     print(hangmanart.stages[lives])
     guess = input('Enter a letter: ').lower()
-
     logging.info(f'User input for guess was {guess}')
-    if guess in display:
+
+# Check if the guess was already made previously
+    if guess in guessed_letters:
         print(f"You've already guessed {guess}")
+    else:
+        guessed_letters.append(guess)
+        logging.info(f'{guess} was appended to guessed letters')
+
+#    if guess in display:
+#        print(f"You've already guessed {guess}")
+
 # evaluate guess and display result to user
 
     for position in range(word_length):
