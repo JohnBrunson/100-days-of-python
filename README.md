@@ -28,3 +28,9 @@ Going to keep this brief due to SNAFU last night with git and getting about 4 ho
 - The product is closer to finished. Greater variety of words to choose from. Still some stuff to clean up, but it's a little cleaner than before. Reminds me... still need to do something about the following:
   - If the user has already guessed a letter AND the letter is already been guessed AND is determined not to be present, don't penalize the player.
 - Beyond that, there's a few other niceties that I'd like to add. Probably will be a tomorrow project.
+
+## Day 6
+
+- Two steps forward, one back. I was able to implement the screen clearing function fairly easily.
+  - The problem is that I can't figure out for the life of me why the code to evaluate "If that guess wasn't in this list of letters, subtract a life."
+- My brain is mush. I'll try again tomorrow.
