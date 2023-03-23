@@ -34,3 +34,9 @@ Going to keep this brief due to SNAFU last night with git and getting about 4 ho
 - Two steps forward, one back. I was able to implement the screen clearing function fairly easily.
   - The problem is that I can't figure out for the life of me why the code to evaluate "If that guess wasn't in this list of letters, subtract a life."
 - My brain is mush. I'll try again tomorrow.
+
+## Day 7
+
+- Still didn't get it, so did a "phone a bot" to get the answer. I think I understand the solution, and went back to implement the code. It's now working mostly correct. I still think it's a tad hacky.
+
+- I do think the only solution to this is probably "build more projects." So, the proverbial "you" will get tortured with that.
