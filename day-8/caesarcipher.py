@@ -26,14 +26,22 @@ def main_menu():
 
 
 # Global Varibles
-# text = input('Enter the message: ').lower()
+text = input('Enter the message: ').lower()
 shift = int(input("Enter the shift number: "))
+encrypted_alphabet = []
 # Functions
 
-
-def encrypt():
-    encrypted_alphabet = alphabet.index(shift)
-    print(encrypted_alphabet)
+for letter in text:
+    # get the letter shifted by the shift number
+    encrypted_letter = (shift + (alphabet.index(letter)))
+    # append the letter to the encrypted alphabet
+    encrypted_alphabet.append(alphabet[int(encrypted_letter)])
+    # take the list and join into one string
+    encrypted_text = ''.join(encrypted_alphabet)
+    print(encrypted_text)
+# print(encrypted_alphabet)
+# def encrypt(text, shift):
+#    encrypted.alphabet = ""
 
 
 # TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
