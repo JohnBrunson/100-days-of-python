@@ -13,10 +13,10 @@ from time import sleep
 # Learned: Ran this through ChatGPT because I thought it'd be easier than getting a human invovled given my working hours. Surprisingly, it did help me get the right solution.
 # In short, the check needed to happen sooner.
 # Give user opportunity to start the game again -- Done 3/23/2023
-# Give user opportunity to append the list of words. (User input list?) -- Could be a little interesting.
-# SFX?
-# Categories?
-# Scoring system?
+# Give user opportunity to append the list of words. (User input list?) -- Could be a little interesting, cut this feature.
+# SFX? -- Not needed. Cutting.
+# Categories? -- Cutting this feature as it isn't necessary... and I'm not sure how much it would add to the game
+# Scoring system? -- So, how should this work? How would a "fair" Scoring system work? How does one account for the letters? Is this a good feature to implement? Think this is going to be a cut feature.
 
 # screen clearing function
 
