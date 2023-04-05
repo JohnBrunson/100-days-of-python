@@ -25,11 +25,13 @@ def main_menu():
     if direction == '1':
         text = input('Enter the message: ').lower()
         shift = int(input("Enter the shift number: "))
-        encrypt(plain_text=text, shift_amount=shift)
+        # encrypt(plain_text=text, shift_amount=shift)
+        caesar(input_text=text, shift_amount=shift, direction=direction)
     if direction == '2':
         text = input('Enter the message: ').lower()
         shift = int(input("Enter the shift number: "))
-        decrypt(cipher_text=text, shift_amount=shift)
+        # decrypt(cipher_text=text, shift_amount=shift)
+        caesar(input_text=text, shift_amount=shift, direction=direction)
     if direction == '3':
         quit()
 
@@ -48,13 +50,27 @@ def encrypt(plain_text, shift_amount):
 def decrypt(cipher_text, shift_amount):
     for letter in cipher_text:
         # get the letter shifted by the shift number
-        encrypted_letter = ((alphabet.index(letter)) - 5)
+        encrypted_letter = ((alphabet.index(letter)) - shift_amount)
         # append the letter to the encrypted alphabet
         encrypted_alphabet.append(alphabet[int(encrypted_letter)])
         # take the list and join into one string
         encrypted_text = ''.join(encrypted_alphabet)
     print(encrypted_text)
     encrypted_text = ''
+
+
+def caesar(input_text, shift_amount, direction):
+    for letter in input_text:
+        # get the letter shifted by the shift number
+        if direction == '1':
+            encrypted_letter = (shift_amount + (alphabet.index(letter)))
+        elif direction == '2':
+            encrypted_letter = ((alphabet.index(letter)) - shift_amount)
+        # append the letter to the encrypted alphabet
+        encrypted_alphabet.append(alphabet[int(encrypted_letter)])
+        # take the list and join into one string
+        encrypted_text = ''.join(encrypted_alphabet)
+    print(encrypted_text)
 
 
 main_menu()
